@@ -1,0 +1,53 @@
+{
+  "name": "bolinger-jenkins",
+  "version": "0.1.0",
+  "author": "Eric Bolinger",
+  "summary": "Install Jenkins and set running port",
+  "license": "Apache-2.0",
+  "source": "https://github.com/ericbisme/bolinger-jenkins.git",
+  "project_page": "https://github.com/ericbisme/bolinger-jenkins.git",
+  "issues_url": "https://github.com/ericbisme/bolinger-jenkins.git",
+  "dependencies": [
+
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.7.0 < 6.0.0"
+    },
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 4.13.1 < 5.0.0"
+    }
+
+  ],
+  "pdk-version": "1.2.1",
+  "template-url": "file:///opt/puppetlabs/pdk/share/cache/pdk-module-template.git",
+  "template-ref": "heads/master-0-gd2dae81"
+}
