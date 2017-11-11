@@ -6,10 +6,10 @@
 #
 # @example
 #   include jenkins::install
-class jenkins::install (
-  String $package_ensure = 'present',
-){
+class jenkins::install inherits jenkins {
+
   package {'jenkins':
-    ensure => $package_ensure,
+    ensure => $jenkins::package_ensure,
   }
+
 }

@@ -6,14 +6,13 @@
 #
 # @example
 #   include jenkins::config
-class jenkins::config (
-  String $port = '8000',
-){
+class jenkins::config inherits jenkins {
 
   file_line { 'Set the desired port number for Jenkins':
     ensure => present,
     path   => '/etc/sysconfig/jenkins',
-    line   => "JENKINS_PORT=\"${port}\"",
+    line   => "JENKINS_PORT=\"${jenkins::port}\"",
     match  => "^JENKINS_PORT=.*$",
   }
+
 }

@@ -7,8 +7,18 @@
 # @example
 #   include jenkins
 class jenkins (
-){
-  class    { '::jenkins::install' : }
-  -> class { '::jenkins::config'  : }
-  -> class { '::jenkins::service' : }
+  String  $package_ensure    = $::jenkins::params::package_ensure,
+  String  $port              = $::jenkins::params::port,
+  String  $service_ensure    = $::jenkins::params::service_ensure,
+  Boolean $service_enable    = $::jenkins::params::service_enable,
+  Boolean $service_hasstatus = $::jenkins::params::service_hasstatus,
+) inherits ::jenkins::params {
+
+  contain jenkins::install
+  contain jenkins::config
+  contain jenkins::service
+
+  Class['::jenkins::install']
+  -> Class['::jenkins::config']
+  ~> Class['::jenkins::service']
 }
