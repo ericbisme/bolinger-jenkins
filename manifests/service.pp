@@ -11,7 +11,7 @@ class jenkins::service (
   Boolean $service_enable    = true,
   Boolean $service_hasstatus = true,
 ){
-  service {'jenkins' :
+  service { 'jenkins' :
     ensure    => $service_ensure,
     enable    => $service_enable,
     hasstatus => $service_hasstatus,
