@@ -9,6 +9,7 @@
 class jenkins::params {
 
   $package_ensure    = 'present'
+  $java_ensure       = 'present'
 
   $port              = '8000'
 
