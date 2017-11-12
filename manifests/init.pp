@@ -16,11 +16,13 @@ class jenkins (
 ) inherits ::jenkins::params {
 
   contain jenkins::repo
+  contain jenkins::firewall
   contain jenkins::install
   contain jenkins::config
   contain jenkins::service
 
   Class['::jenkins::repo']
+  -> Class['::jenkins::firewall']
   -> Class['::jenkins::install']
   -> Class['::jenkins::config']
   ~> Class['::jenkins::service']
