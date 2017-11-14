@@ -22,12 +22,12 @@ This module provides a minimal setup and configuration for Jenkins.
 
 The module will:
 
-1 Install the Jenkins Repository
-1 Install Jenkins
-1 Install Open JDK
-1 Disable firewalld and iptables services to facilitate testing
-1 Set the port on which Jenkins runs
-1 Start Jenkins
+1. Install the Jenkins Repository
+1. Install Jenkins
+1. Install Open JDK
+1. Disable firewalld and iptables services to facilitate testing
+1. Set the port on which Jenkins runs
+1. Start Jenkins
 
 ### Setup Requirements **OPTIONAL**
 
