@@ -12,7 +12,7 @@ class jenkins::config inherits jenkins {
     ensure => present,
     path   => '/etc/sysconfig/jenkins',
     line   => "JENKINS_PORT=\"${jenkins::port}\"",
-    match  => "^JENKINS_PORT=.*$",
+    match  => '^JENKINS_PORT=.*$',
   }
 
 }
